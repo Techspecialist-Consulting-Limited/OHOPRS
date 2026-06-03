@@ -1,0 +1,200 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum AgencyState {
+  active
+  suspended
+  inactive
+}
+
+enum AgencyType {
+  government
+  ngo
+  international
+  private
+}
+
+enum InterventionType {
+  cash_transfer
+  food_distribution
+  shelter
+  medical
+  education
+  livelihood
+}
+
+enum InterventionStatus {
+  draft
+  active
+  completed
+  cancelled
+}
+
+enum EnrollmentStatus {
+  enrolled
+  served
+  exited
+}
+
+enum UserRole {
+  minister
+  executive
+  agency_admin
+  operations
+  partner
+  view_only
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         UserRole
+  agencyId     String?
+  agency       Agency?  @relation(fields: [agencyId], references: [id])
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  accounts Account[]
+  sessions Session[]
+}
+
+model Account {
+  id                String  @id @default(uuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Agency {
+  id           String       @id @default(uuid())
+  name         String
+  shortCode    String       @unique
+  state        AgencyState  @default(active)
+  type         AgencyType
+  contactEmail String?
+  description  String?
+  logoUrl      String?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  users         User[]
+  interventions Intervention[]
+  programmes    Programme[]
+}
+
+model Programme {
+  id          String   @id @default(uuid())
+  agencyId    String
+  agency      Agency   @relation(fields: [agencyId], references: [id])
+  name        String
+  description String?
+  budget      Float?
+  startDate   DateTime?
+  endDate     DateTime?
+  status      String   @default("active")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  interventions Intervention[]
+}
+
+model Intervention {
+  id                  String             @id @default(uuid())
+  agencyId            String
+  agency              Agency             @relation(fields: [agencyId], references: [id])
+  programmeId         String?
+  programme           Programme?         @relation(fields: [programmeId], references: [id])
+  name                String
+  type                InterventionType
+  status              InterventionStatus @default(draft)
+  budget              Float?
+  startDate           DateTime?
+  endDate             DateTime?
+  location            String?
+  targetBeneficiaries Int?
+  description         String?
+  createdAt           DateTime           @default(now())
+  updatedAt           DateTime           @updatedAt
+
+  enrollments Enrollment[]
+}
+
+model Beneficiary {
+  id           String          @id @default(uuid())
+  nationalId   String          @unique
+  fullName     String
+  dateOfBirth  DateTime?
+  gender       String?
+  phoneNumber  String?
+  email        String?
+  state        String
+  lga          String?
+  address      String?
+  povertyScore Float?
+  notes        String?
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+
+  enrollments Enrollment[]
+}
+
+model Enrollment {
+  id             String           @id @default(uuid())
+  beneficiaryId  String
+  beneficiary    Beneficiary      @relation(fields: [beneficiaryId], references: [id])
+  interventionId String
+  intervention   Intervention     @relation(fields: [interventionId], references: [id])
+  status         EnrollmentStatus @default(enrolled)
+  enrolledAt     DateTime         @default(now())
+  servedAt       DateTime?
+  notes          String?
+
+  @@unique([beneficiaryId, interventionId])
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  action    String
+  entity    String
+  entityId  String?
+  details   Json?
+  ipAddress String?
+  createdAt DateTime @default(now())
+}

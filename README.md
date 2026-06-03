@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OHOPRS — One Humanitarian & Poverty Response System
 
-## Getting Started
+National unified platform for coordinating humanitarian and poverty-alleviation interventions across agencies.
 
-First, run the development server:
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Database:** PostgreSQL (with Prisma 7 ORM)
+- **Auth:** NextAuth.js v5 (credentials)
+- **UI:** Tailwind CSS + Recharts
+- **State:** TanStack React Query
+
+## Prerequisites
+
+- Node.js 20+
+- PostgreSQL 16+ (local or [Neon](https://neon.tech) free tier)
+
+## Quick Start
+
+### 1. Setup the Database
+
+**Option A: Docker (recommended)**
+```bash
+docker compose up -d
+```
+
+**Option B: Neon (free hosted Postgres)**
+1. Create a free account at [neon.tech](https://neon.tech)
+2. Create a project and copy the connection string
+3. Update `.env` with your connection string
+
+### 2. Configure Environment
+
+```bash
+cp .env.example .env
+# Edit .env with your DATABASE_URL and a random NEXTAUTH_SECRET
+```
+
+### 3. Install & Migrate
+
+```bash
+npm install
+npx prisma migrate dev --name init
+npm run seed
+```
+
+### 4. Run
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo Credentials
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Email | Password | Role |
+|---|---|---|
+| minister@ohoprs.gov.ng | password123 | Minister (national view) |
+| admin@ncto.gov.ng | password123 | Agency Admin (NCTO) |
+| admin@geep.gov.ng | password123 | Agency Admin (GEEP) |
+| admin@nema.gov.ng | password123 | Agency Admin (NEMA) |
+| admin@redcross.ng | password123 | Agency Admin (NRCS) |
+| ops@ncto.gov.ng | password123 | Operations (NCTO) |
+| partner@worldbank.org | password123 | Partner (limited view) |
+| auditor@finance.gov.ng | password123 | View-Only (national) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+ohoprs/
+├── prisma/
+│   ├── schema.prisma        # Data model
+│   ├── seed.ts              # Seed data
+│   └── migrations/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/login/    # Login page
+│   │   ├── (dashboard)/
+│   │   │   ├── national/    # Ministry dashboard
+│   │   │   ├── agency/      # Agency dashboard
+│   │   │   ├── interventions/ # CRUD
+│   │   │   ├── beneficiaries/ # CRUD
+│   │   │   └── programmes/  # List
+│   │   └── api/             # REST endpoints
+│   ├── components/
+│   │   ├── dashboard/       # Sidebar, stat cards
+│   │   └── providers.tsx    # React Query provider
+│   ├── lib/
+│   │   ├── auth.ts          # NextAuth config
+│   │   ├── prisma.ts        # DB client
+│   │   └── utils.ts         # Helpers
+│   ├── types/               # TypeScript types
+│   └── proxy.ts             # RBAC middleware
+```
 
-To learn more about Next.js, take a look at the following resources:
+## API Endpoints
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Method | Path | Description |
+|---|---|---|
+| POST | `/api/auth/...` | Authentication |
+| GET/POST | `/api/agencies` | List / Create |
+| GET/PATCH | `/api/agencies/[id]` | Detail / Update |
+| GET/POST | `/api/interventions` | List (filtered) / Create |
+| GET/PATCH | `/api/interventions/[id]` | Detail / Update |
+| PATCH | `/api/interventions/[id]/status` | Status transition |
+| GET/POST | `/api/beneficiaries` | List / Register (with dedup) |
+| GET/PATCH | `/api/beneficiaries/[id]` | Detail / Update |
+| POST | `/api/beneficiaries/enroll` | Enroll in intervention |
+| GET/POST | `/api/programmes` | List / Create |
+| GET | `/api/dashboard/national` | National aggregate stats |
+| GET | `/api/dashboard/agency/[id]` | Agency-specific stats |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy to Vercel
 
-## Deploy on Vercel
+1. Push to GitHub
+2. Import repo in Vercel
+3. Set environment variables:
+   - `DATABASE_URL` — your Neon PostgreSQL connection string
+   - `NEXTAUTH_SECRET` — generate with `openssl rand -base64 32`
+   - `NEXTAUTH_URL` — your Vercel deployment URL
+4. Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server |
+| `npm run build` | Build for production |
+| `npm run seed` | Seed database with demo data |
+| `npm run db:migrate` | Run Prisma migrations |
+| `npm run db:studio` | Open Prisma Studio (DB GUI) |
+| `npm run db:reset` | Reset database (drops all data) |
