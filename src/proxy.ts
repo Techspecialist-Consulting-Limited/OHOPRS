@@ -16,24 +16,22 @@ export default auth((req) => {
   const { pathname } = req.nextUrl;
   const session = req.auth;
 
+  if (session?.user) {
+    if (pathname === "/" || pathname === "/login") {
+      const role = session.user.role;
+      if (role === "minister" || role === "executive") {
+        return NextResponse.redirect(new URL("/national", req.url));
+      }
+      return NextResponse.redirect(new URL("/agency", req.url));
+    }
+    return NextResponse.next();
+  }
+
   if (publicRoutes.some((route) => pathname.startsWith(route)) || pathname === "/") {
     return NextResponse.next();
   }
 
-  if (!session?.user) {
-    return NextResponse.redirect(new URL("/login", req.url));
-  }
-
-  const userRole = session.user.role;
-
-  if (pathname === "/" || pathname === "") {
-    if (userRole === "minister" || userRole === "executive") {
-      return NextResponse.redirect(new URL("/national", req.url));
-    }
-    return NextResponse.redirect(new URL("/agency", req.url));
-  }
-
-  return NextResponse.next();
+  return NextResponse.redirect(new URL("/login", req.url));
 });
 
 export const config = {
