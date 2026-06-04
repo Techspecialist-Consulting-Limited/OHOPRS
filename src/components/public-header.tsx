@@ -89,7 +89,7 @@ export function PublicHeader() {
             )
           )}
           <Link
-            href="/login"
+            href="https://ohoprs-core.vercel.app/login"
             className="ml-3 rounded-lg bg-white px-4 py-2 text-sm font-medium text-emerald-900 transition-colors hover:bg-emerald-50"
           >
             Sign In
@@ -123,7 +123,7 @@ export function PublicHeader() {
             </Link>
           ))}
           <Link
-            href="/login"
+            href="https://ohoprs-core.vercel.app/login"
             onClick={() => setMobileOpen(false)}
             className="mt-2 block rounded-lg bg-white px-3 py-2.5 text-center text-sm font-medium text-emerald-900"
           >

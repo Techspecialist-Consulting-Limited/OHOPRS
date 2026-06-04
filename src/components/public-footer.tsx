@@ -25,7 +25,7 @@ export function PublicFooter() {
                 { label: "About Us", href: "/about" },
                 { label: "Our Programmes", href: "/our-programmes" },
                 { label: "Contact", href: "/contact" },
-                { label: "Sign In", href: "/login" },
+                { label: "Sign In", href: "https://ohoprs-core.vercel.app/login" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

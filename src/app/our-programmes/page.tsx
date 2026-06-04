@@ -129,7 +129,7 @@ export default function OurProgrammesPage() {
                   </div>
 
                   <Link
-                    href="/login"
+                    href="https://ohoprs-core.vercel.app/login"
                     className="mt-6 inline-block rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-light"
                   >
                     View Dashboard

@@ -79,7 +79,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Link
-              href="/login"
+              href="https://ohoprs-core.vercel.app/login"
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-emerald-900 transition-colors hover:bg-emerald-50"
             >
               Access Dashboard

@@ -10,7 +10,7 @@ const slides = [
     subtitle: "Dignity for Every Citizen",
     description: "A unified national system for coordinating, tracking, and monitoring all humanitarian and poverty-alleviation interventions across every agency, state, and community.",
     cta: { label: "Learn More", href: "/about" },
-    cta2: { label: "Access Dashboard", href: "/login" },
+    cta2: { label: "Access Dashboard", href: "https://ohoprs-core.vercel.app/login" },
   },
   {
     image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562254/annie-spratt-pwWPpnqOzmM-unsplash_nlj1wn.jpg",
@@ -18,7 +18,7 @@ const slides = [
     subtitle: "for a Better Future",
     description: "Building sustainable livelihoods through targeted empowerment programmes and social protection systems.",
     cta: { label: "Explore Programmes", href: "/our-programmes" },
-    cta2: { label: "Get Started", href: "/login" },
+    cta2: { label: "Get Started", href: "https://ohoprs-core.vercel.app/login" },
   },
   {
     image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562254/annie-spratt-cVEOh_JJmEE-unsplash_ppftj7.jpg",
