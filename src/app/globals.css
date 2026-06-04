@@ -2,17 +2,18 @@
 
 :root {
   --background: #f0f2f0;
-  --foreground: #1a2e1a;
-  --primary: #2d6a4f;
-  --primary-light: #40916c;
+  --foreground: #266c26;
+  --primary: #238732;
+  /* --primary-light: #086916; */
+  --primary-light: #113d17;
   --primary-foreground: #ffffff;
   --muted: #e8ece8;
   --muted-foreground: #5a6b5a;
   --border: #d4dcd4;
   --card: #ffffff;
-  --card-foreground: #1a2e1a;
+  --card-foreground: #52d918;
   --destructive: #dc2626;
-  --success: #2d6a4f;
+  --success: #2a6d2f;
   --warning: #d97706;
   --accent: #d4edda;
   --sidebar: #1a2e1a;

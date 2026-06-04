@@ -73,7 +73,7 @@ export default function NewAgencyPage() {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className="mt-1 block w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
-            placeholder="e.g., National Commission for the Targeting of the Poor"
+            placeholder="e.g., The National Cash Transfer Office"
             required
           />
         </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 const agencies = [
   {
     shortCode: "NCTO",
-    name: "National Commission for the Targeting of the Poor",
+    name: "The National Cash Transfer Office",
     image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=800&q=80",
     description: "The National Cash Transfer Office (NCTO) was established to support Nigeria's poorest households by improving nutrition, enhancing household consumption, and investing in human capital development. NCTO delivers cash transfers to vulnerable populations, with the dual aim of promoting immediate welfare and encouraging co-responsibilities that strengthen the capacities of poor and vulnerable households to improve their standard of living.",
     programmes: [
@@ -17,7 +17,7 @@ const agencies = [
   {
     shortCode: "GEEP",
     name: "Government Enterprise and Empowerment Programme",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80",
+    image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562254/annie-spratt-cNrCQNNfhqY-unsplash_tzxqs6.jpg",
     description: "The Government Enterprise and Empowerment Programme provides loans and grants to women under the MarketMoni programme, farmers under the FarmerMoni programme, and enterprising youth. GEEP empowers micro-businesses and supports economic growth at the grassroots level.",
     programmes: [
       "Micro-Grant for Women Entrepreneurs",
@@ -27,7 +27,7 @@ const agencies = [
   {
     shortCode: "NEMA",
     name: "National Emergency Management Agency",
-    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80",
+    image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562253/sanjoy-sadhukhan-3QNEf_oN-WI-unsplash_b7uiii.jpg",
     description: "NEMA coordinates emergency response and disaster relief across the nation. From food distribution in flood-affected communities to temporary shelter for displaced families, NEMA ensures rapid and effective humanitarian response in times of crisis.",
     programmes: [
       "Emergency Food Distribution — North Central",

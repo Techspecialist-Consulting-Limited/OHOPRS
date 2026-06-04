@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1400&q=80",
+    image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562256/michael-ali-ugQzBfJMg44-unsplash_xn4pv9.jpg",
     title: "One View of Every Intervention",
     subtitle: "Dignity for Every Citizen",
     description: "A unified national system for coordinating, tracking, and monitoring all humanitarian and poverty-alleviation interventions across every agency, state, and community.",
@@ -13,7 +13,7 @@ const slides = [
     cta2: { label: "Access Dashboard", href: "/login" },
   },
   {
-    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=1400&q=80",
+    image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562254/annie-spratt-pwWPpnqOzmM-unsplash_nlj1wn.jpg",
     title: "Driving Social Investment",
     subtitle: "for a Better Future",
     description: "Building sustainable livelihoods through targeted empowerment programmes and social protection systems.",
@@ -21,7 +21,7 @@ const slides = [
     cta2: { label: "Get Started", href: "/login" },
   },
   {
-    image: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1400&q=80",
+    image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562254/annie-spratt-cVEOh_JJmEE-unsplash_ppftj7.jpg",
     title: "Creating Equal Opportunities",
     subtitle: "for Every Nigerian",
     description: "From cash transfers to emergency relief — ensuring no citizen is left behind through coordinated national response.",

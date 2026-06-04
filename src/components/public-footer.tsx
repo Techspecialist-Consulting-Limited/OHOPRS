@@ -9,7 +9,7 @@ export function PublicFooter() {
           <div className="space-y-4">
             <Logo variant="light" />
             <p className="text-sm leading-relaxed text-emerald-300/70">
-              One Humanitarian &amp; Poverty Response System — a unified national
+              One Humanitarian–One Poverty Response System — a unified national
               platform for coordinating humanitarian interventions across all
               agencies, states, and communities.
             </p>
@@ -45,7 +45,7 @@ export function PublicFooter() {
             </h4>
             <ul className="space-y-2">
               {[
-                { shortCode: "NCTO", name: "National Commission for the Targeting of the Poor" },
+                { shortCode: "NCTO", name: "The National Cash Transfer Office" },
                 { shortCode: "GEEP", name: "Government Enterprise and Empowerment Programme" },
                 { shortCode: "NEMA", name: "National Emergency Management Agency" },
                 { shortCode: "NRCS", name: "Nigerian Red Cross Society" },
@@ -94,7 +94,7 @@ export function PublicFooter() {
 
       <div className="border-t border-emerald-800/30">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-4 text-center text-xs text-emerald-300/40 sm:flex-row">
-          <p>© 2026 OHOPRS — One Humanitarian &amp; Poverty Response System</p>
+          <p>© 2026 OHOPRS — One Humanitarian–One Poverty Response System</p>
           <p>Prototype for demonstration purposes.</p>
         </div>
       </div>

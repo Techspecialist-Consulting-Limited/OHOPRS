@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "OHOPRS — National Humanitarian Response System",
   description:
-    "One Humanitarian & Poverty Response System — National unified platform for coordinating humanitarian interventions across all agencies.",
+    "One Humanitarian–One Poverty Response System — National unified platform for coordinating humanitarian interventions across all agencies.",
 };
 
 export default function RootLayout({

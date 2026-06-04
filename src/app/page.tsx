@@ -6,23 +6,23 @@ import { PublicFooter } from "@/components/public-footer";
 import { HeroCarousel } from "@/components/hero-carousel";
 
 const stats = [
-  { value: "6", label: "Active Interventions", desc: "Cash, food, shelter, medical, education, livelihood" },
-  { value: "4", label: "Partner Agencies", desc: "Government & NGO partners" },
+  { value: "250+", label: "Active Interventions", desc: "Cash, food, shelter, medical, education, livelihood" },
+  { value: "65+", label: "Partner Agencies", desc: "Government & NGO partners" },
   { value: "₦1.3B", label: "Total Budget Deployed", desc: "Across all active interventions" },
-  { value: "20+", label: "Beneficiaries Served", desc: "Tracked across all programmes" },
+  { value: "2000+", label: "Beneficiaries Served", desc: "Tracked across all programmes" },
 ];
 
 const programmes = [
   {
     shortCode: "NCTO",
-    name: "National Commission for the Targeting of the Poor",
-    image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80",
+    name: "The National Cash Transfer Office",
+    image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780563028/michael-ali-ugQzBfJMg44-unsplash_xtgg3a.jpg",
     description: "Identifying and targeting poor households for social interventions. Delivering cash transfers to vulnerable populations to improve nutrition and human capital development.",
   },
   {
     shortCode: "GEEP",
     name: "Government Enterprise and Empowerment Programme",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80",
+    image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780562254/annie-spratt-cVEOh_JJmEE-unsplash_ppftj7.jpg",
     description: "Providing enterprise grants, loans, and empowerment support to micro-businesses and women entrepreneurs across all states.",
   },
   {
@@ -40,11 +40,11 @@ const programmes = [
 ];
 
 const team = [
-  { name: "Dr. Amina Bello", role: "National Coordinator", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" },
-  { name: "Mr. Chidi Okonkwo", role: "Executive Director, Operations", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" },
-  { name: "Fatima Usman", role: "Programme Manager, NCTO", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" },
-  { name: "Blessing Adeyemi", role: "Programme Manager, GEEP", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80" },
-  { name: "Ibrahim Musa", role: "Director, Emergency Response", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" },
+  { name: "Dr. Yunus Bello", role: "National Coordinator", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566440/leroy-skalstad-q9jjT1U2km4-unsplash_akmw6i.jpg" },
+  { name: "Mr. Chidi Okonkwo", role: "Executive Director, Operations", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566455/elizeu-dias-2EGNqazbAMk-unsplash_m3n8c2.jpg" },
+  { name: "Baba Usman", role: "Programme Manager, NCTO", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566442/pacha-shot-s-d0peGya6R5Y-unsplash_pkv0h6.jpg" },
+  { name: "Jiga Adeyemi", role: "Programme Manager, GEEP", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566436/raymond-owusu-afriyie-DSK0z-RHLs0-unsplash_ktolax.jpg" },
+  { name: "Ibrahim Fatima", role: "Director, Emergency Response", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566436/raymond-owusu-afriyie-VPvYUK2Iibo-unsplash_odepdl.jpg" },
   { name: "Sarah Okafor", role: "Head, Medical Outreach", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&q=80" },
 ];
 
@@ -85,7 +85,7 @@ export default function LandingPage() {
             </h2>
             <div className="mt-6 space-y-4 text-left text-muted-foreground leading-relaxed">
               <p>
-                The One Humanitarian &amp; Poverty Response System (OHOPRS) is Nigeria&apos;s
+                The One Humanitarian–One Poverty Response System (OHOPRS) is Nigeria&apos;s
                 central digital platform for coordinating and delivering extensive social
                 protection interventions targeted at the country&apos;s poorest and most
                 vulnerable populations.
@@ -175,7 +175,7 @@ export default function LandingPage() {
             </h2>
             <div className="mt-6 space-y-4 text-sm leading-relaxed text-muted-foreground">
               <p>
-                The One Humanitarian &amp; Poverty Response System represents a new era
+                The One Humanitarian–One Poverty Response System represents a new era
                 of coordination and accountability in Nigeria&apos;s social protection
                 landscape. By bringing together all agencies under a single digital
                 platform, we can now track every intervention, every beneficiary, and
@@ -290,7 +290,7 @@ export default function LandingPage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 rounded-lg px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="flex-1 rounded-lg border border-border px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-emerald-400"
             />
             <button
               type="submit"

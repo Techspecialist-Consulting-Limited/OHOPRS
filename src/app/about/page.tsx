@@ -20,7 +20,7 @@ export default function AboutPage() {
               About Us
             </span>
             <h1 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
-              One Humanitarian &amp; Poverty Response System
+              One Humanitarian–One Poverty Response System
             </h1>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="text-2xl font-bold text-foreground">Our Mission</h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            The One Humanitarian &amp; Poverty Response System (OHOPRS) is Nigeria&apos;s
+            The One Humanitarian–One Poverty Response System (OHOPRS) is Nigeria&apos;s
             central digital platform for coordinating and delivering extensive social
             protection interventions targeted at the country&apos;s poorest and most
             vulnerable populations. Our mission is to ensure every intervention reaches

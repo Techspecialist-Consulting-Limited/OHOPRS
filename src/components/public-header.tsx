@@ -7,7 +7,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const agencies = [
-  { shortCode: "NCTO", name: "National Commission for the Targeting of the Poor" },
+  { shortCode: "NCTO", name: "The National Cash Transfer Office" },
   { shortCode: "GEEP", name: "Government Enterprise and Empowerment Programme" },
   { shortCode: "NEMA", name: "National Emergency Management Agency" },
   { shortCode: "NRCS", name: "Nigerian Red Cross Society" },
