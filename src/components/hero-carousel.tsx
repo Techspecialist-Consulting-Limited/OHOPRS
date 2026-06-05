@@ -56,7 +56,6 @@ export function HeroCarousel() {
           <div className="mx-auto flex h-full max-w-4xl items-center px-6 text-center">
             <div className="w-full">
               <span className="inline-block rounded-full bg-emerald-800/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-200 backdrop-blur-sm">
-                National Humanitarian Platform
               </span>
               <h1 className="mt-6 text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
                 {slide.title}

@@ -100,9 +100,9 @@ export default function LandingPage() {
 
           <div className="mt-12 grid gap-8 sm:grid-cols-3">
             {[
-              { icon: "🏛", title: "Executive Visibility", desc: "National dashboard with aggregate KPIs, duplication alerts, and cross-agency oversight." },
-              { icon: "📋", title: "Agency Operations", desc: "Full CRUD for interventions, beneficiary enrollment with real-time dedup detection." },
-              { icon: "👥", title: "Citizen Tracking", desc: "Every beneficiary tracked by National ID. See cross-agency history at a glance." },
+              { icon: "🏛", title: "Multi-Agency Platform", desc: "A single national system that hosts every agency and intervention — all working together under one roof." },
+              { icon: "📊", title: "Organized Intelligence", desc: "Intervention data from across the nation brought together into a clear executive dashboard — the full picture at a glance." },
+              { icon: "📈", title: "Poverty Impact Tracking", desc: "Follow each beneficiary's journey and see real proof of how interventions are lifting people out of poverty." },
             ].map((f) => (
               <div key={f.title} className="rounded-xl border border-border bg-white p-8 shadow-sm">
                 <span className="text-3xl">{f.icon}</span>
