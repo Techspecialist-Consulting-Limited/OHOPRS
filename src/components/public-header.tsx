@@ -9,8 +9,10 @@ import { cn } from "@/lib/utils";
 const agencies = [
   { shortCode: "NCTO", name: "The National Cash Transfer Office" },
   { shortCode: "GEEP", name: "Government Enterprise and Empowerment Programme" },
-  { shortCode: "NEMA", name: "National Emergency Management Agency" },
-  { shortCode: "NRCS", name: "Nigerian Red Cross Society" },
+  { shortCode: "NHGSFP", name: "National Home-Grown School Feeding Programme" },
+  { shortCode: "GVG", name: "Growth and Value Group" },
+  { shortCode: "NASSCO", name: "National Socail Safety-Nets Coordinating Office" },
+  { shortCode: "NPOWER", name: "N-Power Programme" },
 ];
 
 export function PublicHeader() {
@@ -27,7 +29,7 @@ export function PublicHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-emerald-800/20 bg-emerald-900">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+      <div className="mx-auto flex h-22 max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/">
           <Logo variant="light" />
         </Link>

@@ -62,11 +62,14 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="text-2xl font-bold text-foreground">Our Legal Framework</h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
-            OHOPRS operates under the National Social Investment Programme Agency
-            (Establishment) Act, providing the legal framework to design programmes,
-            manage beneficiary databases, strengthen payment and accountability systems,
-            and collaborate with states and development partners to ensure coherent
-            national implementation.
+            OHOPRS is a unified national coordination framework established by the
+            Federal Ministry of Humanitarian Affairs and Poverty Reduction to integrate
+            humanitarian response, social protection, and poverty reduction efforts
+            across all agencies. It builds on the statutory agencies created under the
+            National Social Investment Programme Agency (Establishment) Act &mdash;
+            including NASSCO, NCTO, N-Power, and GEEP &mdash; unifying their operations
+            under a single digital platform with a shared beneficiary register,
+            coordinated financing, and real-time accountability.
           </p>
         </div>
       </section>

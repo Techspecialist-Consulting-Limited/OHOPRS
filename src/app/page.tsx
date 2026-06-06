@@ -6,10 +6,10 @@ import { PublicFooter } from "@/components/public-footer";
 import { HeroCarousel } from "@/components/hero-carousel";
 
 const stats = [
-  { value: "250+", label: "Active Interventions", desc: "Cash, food, shelter, medical, education, livelihood" },
-  { value: "65+", label: "Partner Agencies", desc: "Government & NGO partners" },
-  { value: "₦1.3B", label: "Total Budget Deployed", desc: "Across all active interventions" },
-  { value: "2000+", label: "Beneficiaries Served", desc: "Tracked across all programmes" },
+  { value: "56+", label: "Active Interventions", desc: "Cash, food, shelter, medical, education, livelihood" },
+  { value: "12+", label: "Partner Agencies", desc: "Government & NGO partners" },
+  { value: "₦2.3B", label: "Total Budget Deployed", desc: "Across all active interventions" },
+  { value: "3,000,000", label: "Beneficiaries Served", desc: "Tracked across all programmes" },
 ];
 
 const programmes = [
@@ -26,16 +26,16 @@ const programmes = [
     description: "Providing enterprise grants, loans, and empowerment support to micro-businesses and women entrepreneurs across all states.",
   },
   {
-    shortCode: "NEMA",
-    name: "National Emergency Management Agency",
-    image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=80",
-    description: "Coordinating emergency response and disaster relief across the nation. Food distribution, temporary shelter, and medical assistance.",
+    shortCode: "NASSCO",
+    name: "National Social Safety-Nets Coordinating Office",
+    image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=600&q=80",
+    description: "Central coordinating body for Nigeria's social protection initiatives. Building the National Social Register and facilitating targeted interventions for poor and vulnerable households across all states.",
   },
   {
-    shortCode: "NRCS",
-    name: "Nigerian Red Cross Society",
-    image: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&q=80",
-    description: "Humanitarian organization providing emergency assistance, disaster relief, and mobile health clinics to displaced populations.",
+    shortCode: "NPOWER",
+    name: "N-Power Programme",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80",
+    description: "Nigeria's flagship youth empowerment scheme tackling unemployment through skills training, job placement, and monthly stipends for young Nigerians aged 18–35.",
   },
 ];
 

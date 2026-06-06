@@ -19,18 +19,18 @@ const agencies = [
     email: "support@geep.ohoprs.gov.ng",
   },
   {
-    name: "National Emergency Management Agency",
-    short: "NEMA",
-    address: "NEMA Headquarters, 42 Awolowo Road, Ikoyi, Lagos",
-    phone: "+234 800 NEMA RESPOND",
-    email: "info@nema.ohoprs.gov.ng",
+    name: "National Social Safety-Nets Coordinating Office",
+    short: "NASSCO",
+    address: "No. 76, All Akilu Crescent, State House, Abuja",
+    phone: "+234 800 NASSCO INFO",
+    email: "info@nassco.ohoprs.gov.ng",
   },
   {
-    name: "Nigerian Red Cross Society",
-    short: "NRCS",
-    address: "11 Eko Akete Close, Off St. Gregory Road, Ikoyi, Lagos",
-    phone: "+234 800 RED CROSS",
-    email: "contact@redcross.ohoprs.gov.ng",
+    name: "N-Power Programme",
+    short: "NPOWER",
+    address: "N-Power Headquarters, Fed. Secretariat, Phase II, Abuja",
+    phone: "+234 800 N POWER HELP",
+    email: "support@npower.ohoprs.gov.ng",
   },
 ];
 

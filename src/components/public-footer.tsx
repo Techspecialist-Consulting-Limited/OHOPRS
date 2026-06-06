@@ -47,8 +47,8 @@ export function PublicFooter() {
               {[
                 { shortCode: "NCTO", name: "The National Cash Transfer Office" },
                 { shortCode: "GEEP", name: "Government Enterprise and Empowerment Programme" },
-                { shortCode: "NEMA", name: "National Emergency Management Agency" },
-                { shortCode: "NRCS", name: "Nigerian Red Cross Society" },
+                { shortCode: "NASSCO", name: "National Social Safety-Nets Coordinating Office" },
+                { shortCode: "NPOWER", name: "N-Power Programme" },
               ].map((a) => (
                 <li key={a.shortCode}>
                   <span className="text-sm text-emerald-300/60">

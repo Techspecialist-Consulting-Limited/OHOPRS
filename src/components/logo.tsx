@@ -10,9 +10,9 @@ export function Logo({ variant = "dark", showTagline = true }: LogoProps) {
   return (
     <div className="flex items-center gap-3">
       <img
-        src="https://res.cloudinary.com/daqmbfctv/image/upload/v1780564102/OHO-Logo_ktn0ab.png"
+        src="https://res.cloudinary.com/daqmbfctv/image/upload/v1780737601/davinci_ohoprs__one_humanitarian_one_poverty_response_syst-removebg-preview_ixx8rc.png"
         alt="OHOPRS Logo"
-        className="h-10 w-auto"
+        className="h-22 w-auto"
       />
       {showTagline && (
         <div className="leading-tight">
