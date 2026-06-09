@@ -45,7 +45,7 @@ const team = [
   { name: "Baba Usman", role: "Programme Manager, NCTO", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566442/pacha-shot-s-d0peGya6R5Y-unsplash_pkv0h6.jpg" },
   { name: "Jiga Adeyemi", role: "Programme Manager, GEEP", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566436/raymond-owusu-afriyie-DSK0z-RHLs0-unsplash_ktolax.jpg" },
   { name: "Ibrahim Fatima", role: "Director, Emergency Response", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780566436/raymond-owusu-afriyie-VPvYUK2Iibo-unsplash_odepdl.jpg" },
-  { name: "Sarah Okafor", role: "Head, Medical Outreach", image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=200&q=80" },
+  { name: "Sarah Okafor", role: "Head, Medical Outreach", image: "https://res.cloudinary.com/daqmbfctv/image/upload/v1780995086/OIP_1_iaccdu.webp" },
 ];
 
 const partners = [
@@ -231,16 +231,16 @@ export default function LandingPage() {
           </div>
           <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {[
-              "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&q=80",
-              "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&q=80",
-              "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80",
-              "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400&q=80",
-              "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=400&q=80",
-              "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&q=80",
+              "https://images.pexels.com/photos/9823013/pexels-photo-9823013.jpeg?cs=srgb&dl=pexels-lagosfoodbank-9823013.jpg&fm=jpg",
+              "https://tse1.mm.bing.net/th/id/OIP.SRckwIDrehYkGddw1m5IzAHaLH?pid=ImgDet&w=184&h=276&c=7&dpr=1.3&o=7&rm=3",
+              "https://tse1.mm.bing.net/th/id/OIF.v1BnX11F6AmHPniXgY6K0Q?rs=1&pid=ImgDetMain&o=7&rm=3",
+              "https://tse2.mm.bing.net/th/id/OIP.YuC6S8rNrh1pKc7bZnc5QAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3",
+              "https://polioeradication.org/wp-content/uploads/2016/10/20161011_Nigeria.jpg",
+              "https://tse4.mm.bing.net/th/id/OIP.aw2cx1So6eHSTsnvMQnAzgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3",
               "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=400&q=80",
-              "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
-              "https://images.unsplash.com/photo-1584515933487-779824d29309?w=400&q=80",
-              "https://images.unsplash.com/photo-1593113630400-ea4288922497?w=400&q=80",
+              "https://tse3.mm.bing.net/th/id/OIP.ry2qTpX17x5pL7e8cIZJ7QHaD4?rs=1&pid=ImgDetMain&o=7&rm=3",
+              "https://res.cloudinary.com/daqmbfctv/image/upload/v1780995087/2025-Yemen-Humanitarian-Livelihoods-Assistance-Photo-by-NMO_nnvihv.webp",
+              "https://m80.pt/upload/F/fome_somalia.jpg",
             ].map((img, i) => (
               <div
                 key={i}

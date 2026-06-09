@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
-            backgroundImage: "url(https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1400&q=80)",
+            backgroundImage: "url(https://admin.concern.org.uk/sites/default/files/styles/360x220/public/media/images/2025-04/concern-rs86981-sudan-hunger-response.jpg?changed=2025-04-14T11:52:55+00:00)",
           }}
         />
         <div className="relative mx-auto flex h-full max-w-4xl items-center px-6">
